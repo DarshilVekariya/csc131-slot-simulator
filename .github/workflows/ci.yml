@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Run all `run:` steps from the nested project folder
+    # All `run:` steps will execute from the inner Maven folder
     defaults:
       run:
         working-directory: slot_gui_project/slot_gui_project
@@ -24,7 +24,7 @@ jobs:
         with:
           java-version: "21"
           distribution: "temurin"
-          cache: maven
+          cache: none     # disable caching so it won’t look for pom.xml at the repo root
 
       - name: Build & test with Maven
         run: mvn -B -ntp clean test

@@ -10,7 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:                      # apply below run-dir to all `run:` steps
+    # Run all commands from the slot_gui_project subfolder
+    defaults:
       run:
         working-directory: slot_gui_project
 
@@ -27,4 +28,3 @@ jobs:
 
       - name: Build & test with Maven
         run: mvn -B -ntp clean test
-

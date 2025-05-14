@@ -1,0 +1,16 @@
+# Java build
+*.class
+target/
+bin/
+out/
+
+# IDEs
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# Logs & OS junk
+*.log
+.DS_Store

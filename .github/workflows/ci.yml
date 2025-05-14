@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Run all commands from the slot_gui_project subfolder
+    # Run all `run:` steps from the nested project folder
     defaults:
       run:
-        working-directory: slot_gui_project
+        working-directory: slot_gui_project/slot_gui_project
 
     steps:
       - name: Checkout code
